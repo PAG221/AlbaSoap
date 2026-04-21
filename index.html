@@ -154,7 +154,7 @@
         transition: var(--transition);
       }
       #navbar.scrolled {
-        padding: 12px 5%;
+        padding: 18px 5%; /* Taille fixe pour éviter l'agrandissement */
         box-shadow: 0 4px 30px rgba(200, 140, 120, 0.1);
       }
       .nav-logo {
@@ -169,10 +169,6 @@
       }
       .nav-logo:hover img {
         transform: scale(1.05);
-      }
-      /* Navbar logo shrinks on scroll */
-      #navbar.scrolled .nav-logo img {
-        height: 55px;
       }
 
       .nav-links {
@@ -447,7 +443,9 @@
       }
       .hero-img-frame {
         width: 360px;
-        height: 460px;
+        max-width: 90vw;
+        height: auto;
+        aspect-ratio: 3 / 4;
         margin: 0 auto;
         background: var(--beige);
         border-radius: 200px 200px 120px 120px;
@@ -465,39 +463,6 @@
       .hero-img-frame svg {
         width: 100%;
         height: 100%;
-      }
-      .hero-badge {
-        position: absolute;
-        bottom: -16px;
-        right: -10px;
-        background: var(--white);
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 8px 30px rgba(200, 140, 120, 0.2);
-        font-family: var(--font-serif);
-        font-size: 0.65rem;
-        color: var(--gold);
-        letter-spacing: 0.1em;
-        text-align: center;
-        line-height: 1.5;
-        animation: rotateBadge 12s linear infinite;
-      }
-      @keyframes rotateBadge {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      .hero-badge svg {
-        animation: rotateBadge 12s linear infinite reverse;
-        font-size: 1.2rem;
       }
 
       .hero-stats {
@@ -617,7 +582,7 @@
       }
       .section-title {
         font-family: var(--font-serif);
-        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-size: clamp(1.8rem, 5vw, 3.2rem);
         font-weight: 300;
         color: var(--text-dark);
         line-height: 1.2;
@@ -707,6 +672,7 @@
       .product-img {
         aspect-ratio: 4/5;
         position: relative;
+        width: 100%;
         overflow: hidden;
         background: var(--white);
         display: flex;
@@ -1927,8 +1893,9 @@
           padding: 70px 5%;
         }
         .hero-img-frame {
-          width: 280px;
-          height: 360px;
+          width: min(300px, 80vw);
+          height: auto;
+          aspect-ratio: 3/4;
         }
         .hero-stats {
           flex-wrap: wrap; /* Allow stats to wrap on smaller screens */
@@ -1944,7 +1911,7 @@
           padding: 15px 4%;
         }
         #navbar.scrolled {
-          padding: 10px 4%;
+          padding: 15px 4%; /* Garder identique pour la stabilité sur mobile */
         }
         .footer-bottom {
           flex-direction: column; /* Stack items vertically */
@@ -1958,11 +1925,18 @@
         }
         .products-grid {
           grid-template-columns: repeat(2, 1fr);
-          gap: 16px;
+          gap: 12px;
         }
         .footer-grid {
           grid-template-columns: 1fr;
           gap: 30px;
+          text-align: center;
+        }
+        .footer-logo img,
+        .footer-brand p,
+        .footer-socials {
+          margin-left: auto;
+          margin-right: auto;
         }
         .about-pill {
           display: none;
@@ -1979,6 +1953,7 @@
       @media (max-width: 480px) {
         .products-grid {
           grid-template-columns: 1fr;
+          padding: 0 10px;
         }
         .hero-stats {
           flex-direction: column; /* Stack stats vertically on very small screens */
@@ -1986,7 +1961,9 @@
         }
         .stat {
           flex-basis: auto; /* Remove fixed width when stacked */
-          grid-template-columns: 1fr;
+        }
+        .hero-h1 {
+          font-size: 2.5rem;
         }
       }
     </style>
@@ -2011,7 +1988,7 @@
     ></div>
 
     <!-- NAVBAR -->
-    <nav id="navbar" class="scrolled">
+    <nav id="navbar">
       <a href="#accueil" class="nav-logo">
         <img src="logo.png" alt="Alba Soap Logo" />
       </a>
