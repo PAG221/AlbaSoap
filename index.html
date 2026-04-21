@@ -170,6 +170,7 @@
       .nav-logo:hover img {
         transform: scale(1.05);
       }
+      /* Navbar logo shrinks on scroll */
       #navbar.scrolled .nav-logo img {
         height: 55px;
       }
@@ -1929,6 +1930,32 @@
           width: 280px;
           height: 360px;
         }
+        .hero-stats {
+          flex-wrap: wrap; /* Allow stats to wrap on smaller screens */
+          justify-content: center; /* Center them when wrapped */
+          gap: 1.5rem; /* Adjust gap for wrapped items */
+        }
+        .stat {
+          flex-basis: 45%; /* Give some width to each stat */
+          text-align: center; /* Center text within each stat */
+        }
+        /* Adjust navbar padding for smaller screens */
+        #navbar {
+          padding: 15px 4%;
+        }
+        #navbar.scrolled {
+          padding: 10px 4%;
+        }
+        .footer-bottom {
+          flex-direction: column; /* Stack items vertically */
+          gap: 10px; /* Add some space between stacked items */
+          text-align: center; /* Center text */
+        }
+        .footer-bottom > div {
+          /* Target the div containing the links */
+          flex-direction: column; /* Stack links vertically */
+          gap: 5px; /* Adjust gap for stacked links */
+        }
         .products-grid {
           grid-template-columns: repeat(2, 1fr);
           gap: 16px;
@@ -1951,6 +1978,14 @@
 
       @media (max-width: 480px) {
         .products-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-stats {
+          flex-direction: column; /* Stack stats vertically on very small screens */
+          gap: 1rem;
+        }
+        .stat {
+          flex-basis: auto; /* Remove fixed width when stacked */
           grid-template-columns: 1fr;
         }
       }
