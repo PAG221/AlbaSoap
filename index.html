@@ -1,0 +1,3697 @@
+<!doctype html>
+<!-- saved from url=(0054)file:///C:/Users/papea/Downloads/index_2.html#boutique -->
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alba Soap — La beauté pure, naturellement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      href="./Alba Soap — La beauté pure, naturellement_files/css2"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ============================
+       VARIABLES & RESET
+    ============================ */
+      :root {
+        --rose: #e8a0a8;
+        --rose-light: #fdf2f2;
+        --rose-deep: #b05e67;
+        --gold: #af8f5c;
+        --gold-light: #d4c4a8;
+        --cream: #fcfaf7;
+        --beige: #f5f0eb;
+        --beige-mid: #e2d5c3;
+        --white: #ffffff;
+        --text-dark: #2c2018;
+        --text-mid: #6b5744;
+        --text-light: #9e8575;
+        --shadow-soft: 0 8px 32px rgba(200, 140, 120, 0.12);
+        --shadow-card: 0 4px 24px rgba(180, 120, 100, 0.1);
+        --transition: all 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+        --font-serif: "Cormorant Garamond", Georgia, serif;
+        --font-sans: "Jost", sans-serif;
+        --radius: 14px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background: var(--cream);
+        color: var(--text-dark);
+        overflow-x: hidden;
+        cursor: none;
+      }
+
+      /* custom cursor */
+      .cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: var(--rose-deep);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition:
+          transform 0.15s ease,
+          width 0.25s ease,
+          height 0.25s ease,
+          background 0.25s ease;
+      }
+      .cursor-ring {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        border: 1.5px solid var(--rose);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9998;
+        transform: translate(-50%, -50%);
+        transition:
+          transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+          width 0.3s ease,
+          height 0.3s ease;
+      }
+      body:hover .cursor {
+        opacity: 1;
+      }
+      a:hover ~ .cursor,
+      button:hover ~ .cursor {
+        width: 16px;
+        height: 16px;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-family: var(--font-sans);
+      }
+      ul {
+        list-style: none;
+      }
+
+      /* ============================
+       SCROLLBAR
+    ============================ */
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--beige);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--rose);
+        border-radius: 10px;
+      }
+
+      /* ============================
+       NAVBAR
+    ============================ */
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 18px 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(250, 246, 241, 0.85);
+        backdrop-filter: blur(18px) saturate(1.4);
+        -webkit-backdrop-filter: blur(18px) saturate(1.4);
+        border-bottom: 1px solid rgba(175, 143, 92, 0.1);
+        transition: var(--transition);
+      }
+      #navbar.scrolled {
+        padding: 12px 5%;
+        box-shadow: 0 4px 30px rgba(200, 140, 120, 0.1);
+      }
+      .nav-logo {
+        display: flex;
+        align-items: center;
+      }
+      .nav-logo img {
+        height: 70px;
+        width: auto;
+        object-fit: contain;
+        transition: var(--transition);
+      }
+      .nav-logo:hover img {
+        transform: scale(1.05);
+      }
+      #navbar.scrolled .nav-logo img {
+        height: 55px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2.2rem;
+        align-items: center;
+      }
+      .nav-links a {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-mid);
+        font-weight: 400;
+        position: relative;
+        padding-bottom: 3px;
+        transition: var(--transition);
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--gold);
+        transition: width 0.3s ease;
+      }
+      .nav-links a:hover {
+        color: var(--text-dark);
+      }
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-cart-btn {
+        position: relative;
+        background: none;
+        padding: 8px;
+        color: var(--text-mid);
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: var(--transition);
+      }
+      .nav-cart-btn:hover {
+        color: var(--rose-deep);
+      }
+      .cart-count {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        background: var(--rose-deep);
+        color: #fff;
+        font-size: 0.6rem;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        transform: scale(0);
+        transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .cart-count.visible {
+        transform: scale(1);
+      }
+
+      .nav-hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        padding: 5px;
+      }
+      .nav-hamburger span {
+        display: block;
+        width: 24px;
+        height: 1.5px;
+        background: var(--text-dark);
+        transition: var(--transition);
+      }
+
+      /* ============================
+       HERO
+    ============================ */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: var(--text-dark);
+        padding-top: 0;
+      }
+      .hero-video-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: url("https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=800&auto=format&fit=crop")
+          center/cover no-repeat;
+        filter: brightness(0.8);
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        background: linear-gradient(
+          to right,
+          rgba(44, 32, 24, 0.7) 0%,
+          rgba(44, 32, 24, 0.3) 100%
+        );
+      }
+
+      .hero-petals {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+      .petal {
+        position: absolute;
+        border-radius: 60% 40% 70% 30% / 50% 60% 40% 60%;
+        opacity: 0.22;
+        animation: rotatePetal 18s linear infinite;
+      }
+      @keyframes rotatePetal {
+        0% {
+          transform: rotate(0deg) scale(1);
+        }
+        50% {
+          transform: rotate(180deg) scale(1.08);
+        }
+        100% {
+          transform: rotate(360deg) scale(1);
+        }
+      }
+      @keyframes floatA {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+        }
+        50% {
+          transform: translateY(-30px) translateX(15px);
+        }
+      }
+      @keyframes floatB {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+        }
+        50% {
+          transform: translateY(20px) translateX(-10px);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 0 8% 0 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      .hero-text {
+      }
+      .hero-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        font-family: var(--font-sans);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeUp 0.8s ease 0.2s forwards;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background: var(--gold);
+      }
+      .hero-h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(3.2rem, 7vw, 6.5rem);
+        font-weight: 300;
+        line-height: 1.12;
+        color: var(--white);
+        margin-bottom: 24px;
+        opacity: 0;
+        animation: fadeUp 0.9s ease 0.35s forwards;
+      }
+      .hero-h1 em {
+        font-style: italic;
+        color: var(--rose);
+      }
+      .hero-desc {
+        font-size: 0.95rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 550px;
+        margin-bottom: 36px;
+        font-weight: 300;
+        opacity: 0;
+        animation: fadeUp 0.9s ease 0.5s forwards;
+      }
+      .hero-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--white);
+        color: var(--text-dark);
+        padding: 15px 36px;
+        font-size: 0.78rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: var(--transition);
+        opacity: 0;
+        animation: fadeUp 0.9s ease 0.65s forwards;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-cta::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--rose-deep);
+        transform: translateX(-101%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 0;
+      }
+      .hero-cta:hover::before {
+        transform: translateX(0);
+      }
+      .hero-cta:hover {
+        color: var(--white); /* Ensure text color changes on hover */
+      }
+      .hero-cta span {
+        position: relative;
+        z-index: 1;
+      }
+      .hero-cta svg {
+        position: relative;
+        z-index: 1;
+        width: 16px;
+        transition: transform 0.3s ease;
+      }
+      .hero-cta:hover svg {
+        transform: translateX(4px);
+      }
+
+      .hero-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        animation: fadeScale 1s ease 0.4s forwards;
+      }
+      .hero-img-wrap {
+        position: relative;
+        width: 420px;
+        max-width: 100%;
+      }
+      .hero-img-frame {
+        width: 360px;
+        height: 460px;
+        margin: 0 auto;
+        background: var(--beige);
+        border-radius: 200px 200px 120px 120px;
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+          0 30px 80px rgba(212, 115, 125, 0.2),
+          0 0 0 1px rgba(232, 160, 168, 0.3);
+      }
+      .hero-img-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero-img-frame svg {
+        width: 100%;
+        height: 100%;
+      }
+      .hero-badge {
+        position: absolute;
+        bottom: -16px;
+        right: -10px;
+        background: var(--white);
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 30px rgba(200, 140, 120, 0.2);
+        font-family: var(--font-serif);
+        font-size: 0.65rem;
+        color: var(--gold);
+        letter-spacing: 0.1em;
+        text-align: center;
+        line-height: 1.5;
+        animation: rotateBadge 12s linear infinite;
+      }
+      @keyframes rotateBadge {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .hero-badge svg {
+        animation: rotateBadge 12s linear infinite reverse;
+        font-size: 1.2rem;
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 3rem;
+        margin-top: 60px;
+        opacity: 0;
+        animation: fadeUp 0.9s ease 0.8s forwards;
+      }
+      .stat {
+      }
+      .stat-num {
+        font-family: var(--font-serif);
+        font-size: 1.9rem;
+        font-weight: 500;
+        color: var(--white);
+      }
+      .stat-label {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeScale {
+        from {
+          opacity: 0;
+          transform: scale(0.94);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* ============================
+       MARQUEE STRIP
+    ============================ */
+      .marquee-strip {
+        background: var(--text-dark);
+        padding: 14px 0;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+      }
+      .marquee-track {
+        display: flex;
+        gap: 0;
+        white-space: nowrap;
+        animation: marquee 25s linear infinite;
+      }
+      .marquee-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 30px;
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--rose-light);
+        font-weight: 400;
+      }
+      .marquee-dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ============================
+       SECTION COMMONS
+    ============================ */
+      .section {
+        padding: 100px 8%;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .section-eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 500;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+      .section-eyebrow::before,
+      .section-eyebrow::after {
+        content: "";
+        flex: 1;
+        max-width: 40px;
+        height: 1px;
+        background: var(--gold-light);
+      }
+      .section-title {
+        font-family: var(--font-serif);
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 300;
+        color: var(--text-dark);
+        line-height: 1.2;
+      }
+      .section-title em {
+        font-style: italic;
+        color: var(--rose-deep);
+      }
+      .section-sub {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-top: 14px;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.8;
+      }
+
+      /* ============================
+       SHOP / PRODUCTS
+    ============================ */
+      #boutique {
+        background: var(--cream);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .filter-bar {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 48px;
+        flex-wrap: wrap;
+      }
+      .filter-btn {
+        padding: 9px 24px;
+        border: 1px solid var(--beige-mid);
+        background: transparent;
+        font-family: var(--font-sans);
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-mid);
+        border-radius: 40px;
+        transition: var(--transition);
+      }
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--text-dark);
+        color: var(--white);
+        border-color: var(--text-dark);
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 28px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .product-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        position: relative;
+        transition: var(--transition);
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        display: flex;
+        flex-direction: column;
+      }
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 60px rgba(180, 120, 100, 0.12);
+      }
+
+      .product-category {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--gold);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .product-img {
+        aspect-ratio: 4/5;
+        position: relative;
+        overflow: hidden;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .product-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      .product-card:hover .product-img img {
+        transform: scale(1.1);
+      }
+      .product-img svg {
+        width: 75%;
+        height: 75%;
+        transition: transform 0.5s ease;
+      }
+      .product-card:hover .product-img svg {
+        transform: scale(1.06);
+      }
+
+      .product-badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        padding: 5px 14px;
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        border-radius: 30px;
+        font-weight: 500;
+        font-family: var(--font-sans);
+      }
+      .badge-new {
+        background: var(--rose-deep);
+        color: var(--white);
+      }
+      .badge-best {
+        background: var(--gold);
+        color: var(--white);
+      }
+
+      .product-wishlist {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(8px);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        color: var(--text-light);
+        transition: var(--transition);
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      .product-card:hover .product-wishlist {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .quick-view-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 20px);
+        background: var(--white);
+        color: var(--text-dark);
+        padding: 10px 20px;
+        border-radius: 40px;
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 600;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        opacity: 0;
+        z-index: 5;
+        white-space: nowrap;
+      }
+      .product-card:hover .quick-view-btn {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+      .quick-view-btn:hover {
+        background: var(--text-dark);
+        color: var(--white);
+      }
+      .product-wishlist:hover {
+        color: var(--rose-deep);
+        background: white;
+      }
+      .product-wishlist.liked {
+        color: var(--rose-deep);
+        opacity: 1;
+        background: var(--rose-light); /* Light rose background when liked */
+        border-color: var(--rose-deep); /* Optional: border color */
+        transform: translateY(0);
+      }
+
+      /* Harmonisation de tous les boutons d'action */
+      .add-btn,
+      .form-submit,
+      .quick-view-btn {
+        border-radius: 50px !important;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .add-btn::before,
+      .form-submit::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--rose-deep);
+        transform: translateX(-101%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: -1;
+      }
+      .add-btn:hover::before,
+      .form-submit:hover::before {
+        transform: translateX(0);
+      }
+
+      .product-info {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .product-name {
+        font-family: var(--font-serif);
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: var(--text-dark);
+        margin-bottom: 4px;
+        letter-spacing: 0.01em;
+      }
+      .product-desc {
+        font-size: 0.85rem;
+        color: var(--text-mid);
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-weight: 300;
+        flex-grow: 1;
+      }
+      .product-foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .product-price {
+        font-family: var(--font-serif);
+        font-size: 1.15rem;
+        color: var(--text-dark);
+        font-weight: 600;
+      }
+      .product-price span {
+        font-size: 0.78rem;
+        color: var(--text-light);
+        font-weight: 300;
+        font-family: var(--font-sans);
+      }
+
+      .add-btn {
+        background: var(--text-dark);
+        color: var(--white);
+        padding: 9px 18px;
+        border-radius: 30px;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .add-btn:hover {
+        background: var(--rose-deep);
+      }
+      .add-btn.added {
+        background: var(--rose-deep);
+      }
+
+      /* ============================
+       ABOUT
+    ============================ */
+      #apropos {
+        background: url("https://images.unsplash.com/photo-1540555700478-4be289fbece8?q=80&w=1920&auto=format&fit=crop")
+          center/cover no-repeat fixed;
+        position: relative;
+      }
+      #apropos::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.92);
+        z-index: 1;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+      .about-visual {
+        position: relative;
+      }
+      .about-img-main {
+        width: 100%;
+        max-width: 420px;
+        aspect-ratio: 3/4;
+        background: linear-gradient(
+          135deg,
+          var(--rose-light),
+          var(--beige-mid)
+        );
+        border-radius: 180px 180px 80px 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 30px 70px rgba(212, 115, 125, 0.18);
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      .about-img-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .about-img-main svg {
+        width: 70%;
+      }
+      .about-pill {
+        position: absolute;
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 16px 20px;
+        box-shadow: 0 8px 30px rgba(180, 120, 100, 0.14);
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .about-pill-1 {
+        bottom: 30px;
+        right: -20px;
+      }
+      .about-pill-2 {
+        top: 30px;
+        left: -20px;
+      }
+      .pill-icon {
+        font-size: 1.5rem;
+      }
+      .pill-text {
+        font-size: 0.78rem;
+        color: var(--text-mid);
+        line-height: 1.4;
+      }
+      .pill-text strong {
+        display: block;
+        color: var(--text-dark);
+        font-size: 0.85rem;
+        margin-bottom: 2px;
+      }
+
+      .about-content {
+      }
+      .about-text {
+        font-size: 0.95rem;
+        line-height: 1.9;
+        color: var(--text-mid);
+        margin-bottom: 20px;
+        font-weight: 300;
+      }
+      .about-features {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 34px;
+      }
+      .about-feature {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .feature-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: linear-gradient(
+          135deg,
+          var(--rose-light),
+          var(--gold-light)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+      }
+      .feature-text h4 {
+        font-family: var(--font-serif);
+        font-size: 1rem;
+        color: var(--text-dark);
+        margin-bottom: 3px;
+      }
+      .feature-text p {
+        font-size: 0.8rem;
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+
+      /* ============================
+       TESTIMONIALS
+    ============================ */
+      #temoignages {
+        background: var(--text-dark);
+      }
+      #temoignages .section-eyebrow {
+        color: var(--gold-light);
+      }
+      #temoignages .section-eyebrow::before,
+      #temoignages .section-eyebrow::after {
+        background: rgba(201, 169, 110, 0.3);
+      }
+      #temoignages .section-title {
+        color: var(--white);
+      }
+      #temoignages .section-sub {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 24px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius);
+        padding: 32px;
+        position: relative;
+        transition: var(--transition);
+      }
+      .testimonial-card:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-4px);
+      }
+      .testimonial-card::before {
+        content: '"';
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        font-family: var(--font-serif);
+        font-size: 4rem;
+        color: var(--rose);
+        opacity: 0.25;
+        line-height: 1;
+      }
+      .stars {
+        display: flex;
+        gap: 4px;
+        margin-bottom: 16px;
+      }
+      .star {
+        color: var(--gold);
+        font-size: 0.9rem;
+      }
+      .testimonial-text {
+        font-size: 0.9rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 24px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: var(--font-serif);
+      }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .author-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-serif);
+        font-size: 1.1rem;
+        color: var(--white);
+        font-weight: 500;
+      }
+      .author-name {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--white);
+      }
+      .author-meta {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.4);
+        margin-top: 2px;
+      }
+
+      /* ============================
+       CONTACT
+    ============================ */
+      #contact {
+        background: var(--white);
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .contact-info h3 {
+        font-family: var(--font-serif);
+        font-size: 1.7rem;
+        color: var(--text-dark);
+        margin-bottom: 16px;
+        font-weight: 400;
+      }
+      .contact-info p {
+        font-size: 0.9rem;
+        color: var(--text-mid);
+        line-height: 1.8;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+      .contact-items {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 0.85rem;
+        color: var(--text-mid);
+      }
+      .contact-item-icon {
+        width: 38px;
+        height: 38px;
+        background: var(--beige);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .form-field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .form-field label {
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-light);
+        font-weight: 500;
+      }
+      .form-field input,
+      .form-field textarea {
+        padding: 13px 16px;
+        border: 1px solid var(--beige-mid);
+        background: var(--cream);
+        border-radius: 8px;
+        font-family: var(--font-sans);
+        font-size: 0.88rem;
+        color: var(--text-dark);
+        transition: var(--transition);
+        resize: vertical;
+      }
+      .form-field input:focus,
+      .form-field textarea:focus {
+        outline: none;
+        border-color: var(--gold);
+        background: var(--white);
+        box-shadow: 0 0 0 3px rgba(175, 143, 92, 0.08);
+      }
+      .form-field textarea {
+        min-height: 120px;
+      }
+      .form-submit {
+        background: var(--text-dark);
+        color: var(--white);
+        padding: 14px 32px;
+        font-family: var(--font-sans);
+        font-size: 0.78rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        border-radius: 50px;
+        transition: var(--transition);
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .form-submit:hover {
+        background: var(--rose-deep);
+      }
+      .form-msg {
+        font-size: 0.82rem;
+        color: var(--rose-deep);
+        display: none;
+        padding: 10px 0;
+      }
+
+      /* ============================
+       FOOTER
+    ============================ */
+      footer {
+        background: var(--text-dark);
+        color: rgba(255, 255, 255, 0.6);
+        padding: 70px 8% 30px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 50px;
+        max-width: 1300px;
+        margin: 0 auto 50px;
+      }
+      .footer-brand {
+      }
+      .footer-logo {
+        font-family: var(--font-serif);
+        font-size: 1.7rem;
+        color: var(--white);
+        margin-bottom: 14px;
+      }
+      .footer-logo img {
+        height: 60px;
+        width: auto;
+        display: block;
+        filter: grayscale(100%);
+        transition: var(--transition);
+      }
+      .footer-logo:hover img {
+        filter: grayscale(0%);
+      }
+      .footer-brand p {
+        font-size: 0.83rem;
+        line-height: 1.8;
+        max-width: 260px;
+      }
+      .footer-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 22px;
+      }
+      .social-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.85rem;
+        transition: var(--transition);
+      }
+      .social-btn:hover {
+        background: var(--rose);
+        border-color: var(--rose);
+        color: var(--white);
+      }
+
+      .footer-col h4 {
+        font-family: var(--font-serif);
+        font-size: 1rem;
+        color: var(--white);
+        margin-bottom: 18px;
+        font-weight: 400;
+      }
+      .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-col ul li a {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.45);
+        transition: var(--transition);
+      }
+      .footer-col ul li a:hover {
+        color: var(--rose-light);
+      }
+
+      .footer-newsletter {
+      }
+      .footer-newsletter h4 {
+        font-family: var(--font-serif);
+        font-size: 1rem;
+        color: var(--white);
+        margin-bottom: 10px;
+        font-weight: 400;
+      }
+      .footer-newsletter p {
+        font-size: 0.82rem;
+        margin-bottom: 18px;
+      }
+      .newsletter-form {
+        display: flex;
+        gap: 0;
+      }
+      .newsletter-form input {
+        flex: 1;
+        padding: 11px 16px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: none;
+        border-radius: 6px 0 0 6px;
+        font-family: var(--font-sans);
+        font-size: 0.82rem;
+        color: var(--white);
+      }
+      .newsletter-form input::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .newsletter-form input:focus {
+        outline: none;
+        border-color: var(--rose);
+      }
+      .newsletter-form button {
+        padding: 11px 18px;
+        background: var(--rose);
+        color: var(--white);
+        border: none;
+        border-radius: 0 6px 6px 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: var(--transition);
+      }
+      .newsletter-form button:hover {
+        background: var(--rose-deep);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        padding-top: 24px;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.3);
+      }
+      .footer-bottom a {
+        color: rgba(255, 255, 255, 0.4);
+        transition: var(--transition);
+      }
+      .footer-bottom a:hover {
+        color: var(--rose-light);
+      }
+
+      /* ============================
+       CART SIDEBAR
+    ============================ */
+      .cart-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(30, 18, 12, 0.5);
+        backdrop-filter: blur(4px);
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+      }
+      .cart-overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cart-sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 420px;
+        max-width: 95vw;
+        background: var(--white);
+        z-index: 2001;
+        transform: translateX(102%);
+        transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+      }
+      .cart-sidebar.open {
+        transform: translateX(0);
+      }
+
+      .cart-header {
+        padding: 24px 24px 20px;
+        border-bottom: 1px solid var(--beige);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .cart-title {
+        font-family: var(--font-serif);
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--text-dark);
+      }
+      .cart-close {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--cream);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--text-mid);
+        transition: var(--transition);
+      }
+      .cart-close:hover {
+        background: var(--rose-light);
+        color: var(--rose-deep);
+      }
+
+      .cart-items {
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .cart-empty {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        color: var(--text-light);
+        text-align: center;
+      }
+      .cart-empty svg {
+        opacity: 0.3;
+      }
+      .cart-empty p {
+        font-size: 0.9rem;
+        font-family: var(--font-serif);
+        font-style: italic;
+      }
+
+      .cart-item {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 14px;
+        background: var(--cream);
+        border-radius: 10px;
+      }
+      .cart-item-img {
+        width: 68px;
+        height: 80px;
+        border-radius: 8px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: var(--beige);
+      }
+      .cart-item-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .cart-item-img svg {
+        width: 100%;
+        height: 100%;
+      }
+      .cart-item-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .cart-item-name {
+        font-family: var(--font-serif);
+        font-size: 0.95rem;
+        color: var(--text-dark);
+        margin-bottom: 4px;
+      }
+      .cart-item-price {
+        font-size: 0.82rem;
+        color: var(--text-light);
+        margin-bottom: 10px;
+      }
+      .cart-qty {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .qty-btn {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--beige);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        color: var(--text-mid);
+        transition: var(--transition);
+      }
+      .qty-btn:hover {
+        background: var(--rose);
+        color: var(--white);
+      }
+      .qty-num {
+        font-size: 0.88rem;
+        font-weight: 500;
+        min-width: 20px;
+        text-align: center;
+      }
+      .cart-item-remove {
+        font-size: 0.65rem;
+        color: var(--rose-deep);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-top: 8px;
+        display: inline-block;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .cart-item-remove:hover {
+        color: var(--text-dark);
+      }
+      .cart-item-total {
+        font-family: var(--font-serif);
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        white-space: nowrap;
+      }
+
+      .cart-footer {
+        padding: 20px 24px 28px;
+        border-top: 1px solid var(--beige);
+      }
+      .cart-subtotal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+      .cart-subtotal span {
+        font-size: 0.82rem;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .cart-subtotal-val {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+      .cart-note {
+        font-size: 0.72rem;
+        color: var(--text-light);
+        margin-bottom: 20px;
+      }
+      .cart-whatsapp {
+        width: 100%;
+        padding: 15px;
+        background: #25d366;
+        color: var(--white);
+        border-radius: 10px;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: var(--transition);
+        font-family: var(--font-sans);
+      }
+      .cart-whatsapp:hover {
+        background: #1da851;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+      }
+
+      /* ============================
+       TOAST
+    ============================ */
+      .toast {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%) translateY(80px);
+        background: var(--text-dark);
+        color: var(--white);
+        padding: 14px 28px;
+        border-radius: 40px;
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        z-index: 3000;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .toast.show {
+        transform: translateX(-50%) translateY(0);
+      }
+      .toast-icon {
+        color: var(--rose);
+        font-size: 1rem;
+      }
+
+      /* ============================
+       WHATSAPP FLOAT
+    ============================ */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 900;
+        width: 56px;
+        height: 56px;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+        transition: var(--transition);
+        text-decoration: none;
+        color: var(--white);
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.12);
+        box-shadow: 0 12px 36px rgba(37, 211, 102, 0.5);
+      }
+      .whatsapp-float svg {
+        width: 26px;
+      }
+      .whatsapp-pulse {
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 2px solid rgba(37, 211, 102, 0.4);
+        animation: pulse 2.2s ease infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+
+      /* ============================
+       QUICK VIEW MODAL
+    ============================ */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(44, 32, 24, 0.4);
+        backdrop-filter: blur(8px);
+        z-index: 3000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        padding: 20px;
+      }
+      .modal-overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .modal-content {
+        background: var(--white);
+        width: 100%;
+        max-width: 900px;
+        border-radius: 20px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        transform: scale(0.9);
+        transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+      }
+      .modal-overlay.open .modal-content {
+        transform: scale(1);
+      }
+      .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: var(--cream);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: var(--text-dark);
+        z-index: 10;
+        transition: var(--transition);
+      }
+      .modal-close:hover {
+        background: var(--rose-light);
+        color: var(--rose-deep);
+      }
+      .modal-img {
+        background: var(--beige);
+        height: 100%;
+      }
+      .modal-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .modal-details {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .modal-category {
+        font-size: 0.75rem;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+      @media (max-width: 768px) {
+        .modal-content {
+          grid-template-columns: 1fr;
+          max-height: 90vh;
+          overflow-y: auto;
+        }
+        .modal-details {
+          padding: 30px;
+        }
+        .modal-img {
+          height: 350px;
+        }
+      }
+
+      /* ============================
+       SCROLL ANIMATIONS
+    ============================ */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.75s ease,
+          transform 0.75s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-delay-1 {
+        transition-delay: 0.1s;
+      }
+      .reveal-delay-2 {
+        transition-delay: 0.2s;
+      }
+      .reveal-delay-3 {
+        transition-delay: 0.3s;
+      }
+      .reveal-delay-4 {
+        transition-delay: 0.4s;
+      }
+
+      /* ============================
+       MOBILE NAV
+    ============================ */
+      .mobile-menu {
+        position: fixed;
+        inset: 0;
+        background: var(--cream);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        transform: translateX(101%);
+        transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .mobile-menu.open {
+        transform: translateX(0);
+      }
+      .mobile-menu a {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        font-weight: 300;
+        color: var(--text-dark);
+        letter-spacing: 0.04em;
+        transition: var(--transition);
+      }
+      .mobile-menu a:hover {
+        color: var(--rose-deep);
+      }
+      .mobile-menu-logo {
+        height: 80px;
+        width: auto;
+        margin-bottom: 1rem;
+      }
+      .mobile-close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        font-size: 1.5rem;
+        background: none;
+        color: var(--text-mid);
+        transition: var(--transition);
+      }
+      .mobile-close:hover {
+        color: var(--rose-deep);
+        transform: rotate(90deg);
+      }
+
+      /* ============================
+       RESPONSIVE
+    ============================ */
+      @media (max-width: 1024px) {
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding: 0 6%;
+        }
+        .hero-text {
+          order: 2;
+        }
+        .hero-visual {
+          order: 1;
+        }
+        .hero-eyebrow {
+          justify-content: center;
+        }
+        .hero-desc {
+          margin: 0 auto 36px;
+        }
+        .hero-cta {
+          align-self: center;
+        }
+        .hero-stats {
+          justify-content: center;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 50px;
+          text-align: center;
+        }
+        .about-feature {
+          text-align: left;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-hamburger {
+          display: flex;
+        }
+        .section {
+          padding: 70px 5%;
+        }
+        .hero-img-frame {
+          width: 280px;
+          height: 360px;
+        }
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .about-pill {
+          display: none;
+        }
+        body {
+          cursor: auto;
+        }
+        .cursor,
+        .cursor-ring {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <!-- CURSOR -->
+    <div
+      class="cursor"
+      id="cursor"
+      style="left: 515px; top: 325px; width: 10px; height: 10px"
+    ></div>
+    <div
+      class="cursor-ring"
+      id="cursorRing"
+      style="
+        left: 515px;
+        top: 325px;
+        width: 32px;
+        height: 32px;
+        border-color: var(--rose);
+      "
+    ></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="scrolled">
+      <a href="#accueil" class="nav-logo">
+        <img src="logo.png" alt="Alba Soap Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#boutique">Boutique</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#temoignages">Avis</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div style="display: flex; gap: 10px; align-items: center">
+        <button class="nav-cart-btn" id="cartToggle" aria-label="Panier">
+          <svg
+            width="22"
+            height="22"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"
+            ></path>
+          </svg>
+          <span class="cart-count visible" id="cartCount">3</span>
+        </button>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <img src="logo.png" alt="Alba Soap Logo" class="mobile-menu-logo" />
+      <a href="#accueil" class="mobile-link">Accueil</a>
+      <a href="#boutique" class="mobile-link">Boutique</a>
+      <a href="#apropos" class="mobile-link">À propos</a>
+      <a href="#temoignages" class="mobile-link">Avis</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="accueil">
+      <div id="hero">
+        <div class="hero-video-bg"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-eyebrow">Luxe &amp; Nature</div>
+            <h1 class="hero-h1">La beauté pure,<br /><em>naturellement</em></h1>
+            <p class="hero-desc">
+              Des soins artisanaux élaborés avec amour, des ingrédients
+              botaniques d'exception pour révéler l'éclat naturel de votre peau.
+            </p>
+            <a href="#boutique" class="hero-cta">
+              <span>Découvrir la collection</span>
+              <svg
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
+            </a>
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Naturel</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">+5K</div>
+                <div class="stat-label">Clientes</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">Zero</div>
+                <div class="stat-label">Chimique</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <span class="marquee-item"
+          >Ingrédients Naturels <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Savons Artisanaux <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Sans Paraben <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Fait avec Amour <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Cruelty Free <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Vegan Friendly <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Premium Quality <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Ingrédients Naturels <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Savons Artisanaux <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Sans Paraben <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Fait avec Amour <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Cruelty Free <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Vegan Friendly <span class="marquee-dot"></span
+        ></span>
+        <span class="marquee-item"
+          >Premium Quality <span class="marquee-dot"></span
+        ></span>
+      </div>
+    </div>
+
+    <!-- BOUTIQUE -->
+    <section class="section" id="boutique">
+      <div class="section-header reveal visible">
+        <div class="section-eyebrow">Notre Sélection</div>
+        <h2 class="section-title">La <em>Collection</em> Alba</h2>
+        <p class="section-sub">
+          Chaque savon est une œuvre d'art formulée à la main, avec des
+          ingrédients botaniques soigneusement sélectionnés.
+        </p>
+      </div>
+      <div class="filter-bar reveal reveal-delay-1 visible">
+        <button class="filter-btn active" data-filter="all">Tout voir</button>
+        <button class="filter-btn" data-filter="visage">Visage</button>
+        <button class="filter-btn" data-filter="corps">Corps</button>
+        <button class="filter-btn" data-filter="cheveux">Cheveux</button>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <div class="product-card reveal visible" data-id="1">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600"
+              alt="Savon Rose de Damas Alba"
+            />
+            <span class="product-badge badge-best">Best Seller</span>
+            <button
+              class="product-wishlist"
+              onclick="toggleWish(event, this)"
+              aria-label="Favoris"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Savon Rose de Damas</div>
+            <div class="product-desc">Hydratation profonde &amp; éclat</div>
+            <div class="product-foot">
+              <div class="product-price">4 500 <span>FCFA</span></div>
+              <button class="add-btn" onclick="addToCart(1, this)">
+                <svg
+                  width="13"
+                  height="13"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v16m8-8H4"
+                  ></path>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal visible" data-id="2">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=800&auto=format&fit=crop"
+              alt="Savon Argan & Miel Alba"
+            />
+            <span class="product-badge badge-new">Nouveau</span>
+            <button
+              class="product-wishlist"
+              onclick="toggleWish(event, this)"
+              aria-label="Favoris"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Savon Argan &amp; Miel</div>
+            <div class="product-desc">Nourrissant &amp; anti-âge</div>
+            <div class="product-foot">
+              <div class="product-price">5 200 <span>FCFA</span></div>
+              <button class="add-btn" onclick="addToCart(2, this)">
+                <svg
+                  width="13"
+                  height="13"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v16m8-8H4"
+                  ></path>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal visible" data-id="3">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600"
+              alt="Savon Lavande Pure Alba"
+            />
+
+            <button
+              class="product-wishlist"
+              onclick="toggleWish(event, this)"
+              aria-label="Favoris"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Savon Lavande Pure</div>
+            <div class="product-desc">Apaisant &amp; relaxant</div>
+            <div class="product-foot">
+              <div class="product-price">3 800 <span>FCFA</span></div>
+              <button class="add-btn" onclick="addToCart(3, this)">
+                <svg
+                  width="13"
+                  height="13"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v16m8-8H4"
+                  ></path>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal visible" data-id="4">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=600"
+              alt="Shampooing Solide Karité Alba"
+            />
+            <span class="product-badge badge-new">Nouveau</span>
+            <button
+              class="product-wishlist"
+              onclick="toggleWish(event, this)"
+              aria-label="Favoris"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Shampooing Solide Karité</div>
+            <div class="product-desc">Force &amp; brillance naturelle</div>
+            <div class="product-foot">
+              <div class="product-price">6 500 <span>FCFA</span></div>
+              <button class="add-btn" onclick="addToCart(4, this)">
+                <svg
+                  width="13"
+                  height="13"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v16m8-8H4"
+                  ></path>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal visible" data-id="5">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600"
+              alt="Savon Charbon & Tea Tree Alba"
+            />
+            <span class="product-badge badge-best">Best Seller</span>
+            <button
+              class="product-wishlist"
+              onclick="toggleWish(event, this)"
+              aria-label="Favoris"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Savon Charbon &amp; Tea Tree</div>
+            <div class="product-desc">Purifiant &amp; détoxifiant</div>
+            <div class="product-foot">
+              <div class="product-price">4 200 <span>FCFA</span></div>
+              <button class="add-btn" onclick="addToCart(5, this)">
+                <svg
+                  width="13"
+                  height="13"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v16m8-8H4"
+                  ></path>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal visible" data-id="6">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600"
+              alt="Savon Jasmin & Vanille Alba"
+            />
+
+            <button
+              class="product-wishlist"
+              onclick="toggleWish(event, this)"
+              aria-label="Favoris"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Savon Jasmin &amp; Vanille</div>
+            <div class="product-desc">Douceur &amp; sensualité</div>
+            <div class="product-foot">
+              <div class="product-price">4 800 <span>FCFA</span></div>
+              <button class="add-btn" onclick="addToCart(6, this)">
+                <svg
+                  width="13"
+                  height="13"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v16m8-8H4"
+                  ></path>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal visible" data-id="7">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600"
+              alt="Savon Aloe & Concombre Alba"
+            />
+            <span class="product-badge badge-new">Nouveau</span>
+            <button
+              class="product-wishlist"
+              onclick="toggleWish(event, this)"
+              aria-label="Favoris"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Savon Aloe &amp; Concombre</div>
+            <div class="product-desc">Fraîcheur &amp; hydratation</div>
+            <div class="product-foot">
+              <div class="product-price">3 500 <span>FCFA</span></div>
+              <button class="add-btn" onclick="addToCart(7, this)">
+                <svg
+                  width="13"
+                  height="13"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v16m8-8H4"
+                  ></path>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal visible" data-id="8">
+          <div class="product-img">
+            <img
+              src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=80&w=800&auto=format&fit=crop"
+              alt="Coffret Luxe Alba"
+            />
+            <span class="product-badge badge-best">Best Seller</span>
+            <button
+              class="product-wishlist"
+              onclick="toggleWish(event, this)"
+              aria-label="Favoris"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-name">Coffret Luxe Alba</div>
+            <div class="product-desc">L'essentiel beauté en coffret</div>
+            <div class="product-foot">
+              <div class="product-price">18 000 <span>FCFA</span></div>
+              <button class="add-btn" onclick="addToCart(8, this)">
+                <svg
+                  width="13"
+                  height="13"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v16m8-8H4"
+                  ></path>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="modal-overlay" id="quickViewModal">
+      <div class="modal-content" id="modalContent">
+        <!-- Dynamiquement rempli par JS -->
+      </div>
+    </div>
+
+    <!-- À PROPOS -->
+    <section class="section" id="apropos">
+      <div class="about-grid">
+        <div class="about-visual reveal visible">
+          <div class="about-img-main">
+            <img
+              src="https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600"
+              alt="Production artisanale Alba Soap"
+            />
+          </div>
+          <div class="about-pill about-pill-1">
+            <div class="pill-icon">🌿</div>
+            <div class="pill-text">
+              <strong>100% Bio</strong>
+              Ingrédients certifiés
+            </div>
+          </div>
+          <div class="about-pill about-pill-2">
+            <div class="pill-icon">✨</div>
+            <div class="pill-text">
+              <strong>Fait main</strong>
+              Chaque savon unique
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div
+            class="section-header"
+            style="text-align: left; margin-bottom: 30px"
+          >
+            <div class="section-eyebrow" style="justify-content: flex-start">
+              Notre Histoire
+            </div>
+            <h2 class="section-title">
+              L'art de prendre<br />soin de <em>soi</em>
+            </h2>
+          </div>
+          <p class="about-text reveal visible">
+            Alba Soap est née d'une passion profonde pour la nature et le
+            bien-être. Fondée par une artisane passionnée, notre marque incarne
+            la rencontre entre la luxuriance des ingrédients botaniques et
+            l'exigence du soin haut de gamme.
+          </p>
+          <p class="about-text reveal reveal-delay-1 visible">
+            Chaque savon Alba est formulé à la main, en petites séries, pour
+            garantir une qualité incomparable. Nous sélectionnons avec soin des
+            huiles précieuses, des fleurs séchées et des essences rares qui
+            nourrissent, protègent et subliment votre peau.
+          </p>
+          <div class="about-features">
+            <div class="about-feature reveal reveal-delay-2 visible">
+              <div class="feature-icon">🌸</div>
+              <div class="feature-text">
+                <h4>Ingrédients botaniques</h4>
+                <p>
+                  Roses de Damas, huile d'argan, karité pur et extraits floraux
+                  d'exception.
+                </p>
+              </div>
+            </div>
+            <div class="about-feature reveal reveal-delay-3 visible">
+              <div class="feature-icon">🫧</div>
+              <div class="feature-text">
+                <h4>Saponification à froid</h4>
+                <p>
+                  Méthode ancestrale qui préserve tous les bienfaits des huiles
+                  végétales.
+                </p>
+              </div>
+            </div>
+            <div class="about-feature reveal reveal-delay-4 visible">
+              <div class="feature-icon">💚</div>
+              <div class="feature-text">
+                <h4>Éco-responsable</h4>
+                <p>
+                  Emballages recyclables, zéro plastique, engagement pour une
+                  beauté durable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="temoignages">
+      <div class="section-header reveal visible">
+        <div class="section-eyebrow">Témoignages</div>
+        <h2 class="section-title" style="color: var(--white)">
+          Ce qu'elles <em style="color: var(--rose)">disent</em>
+        </h2>
+        <p class="section-sub">
+          Des milliers de femmes ont déjà adopté Alba Soap dans leur rituel
+          beauté quotidien.
+        </p>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <div class="testimonial-card reveal visible">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            Le savon Rose de Damas a littéralement transformé ma peau. En deux
+            semaines, mon teint est lumineux et unifié. Je ne peux plus m'en
+            passer !
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=100&h=100&fit=crop"
+                alt="Fatou"
+              />
+            </div>
+            <div>
+              <div class="author-name">Fatou Diallo</div>
+              <div class="author-meta">Cliente · Dakar</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal visible">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            Enfin des produits naturels qui tiennent leurs promesses ! Le
+            coffret cadeau que j'ai offert à ma mère a été un énorme succès.
+            Qualité irréprochable.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?q=80&w=100&h=100&fit=crop"
+                alt="Mariama"
+              />
+            </div>
+            <div>
+              <div class="author-name">Mariama Baldé</div>
+              <div class="author-meta">Cliente · Conakry</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal visible">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            Je suis convertie aux savons artisanaux depuis que j'ai découvert
+            Alba Soap. Le packaging est magnifique et les parfums sont divins.
+            Service client au top !
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1567532939604-b6c5b0adccbf?q=80&w=100&h=100&fit=crop"
+                alt="Aminata"
+              />
+            </div>
+            <div>
+              <div class="author-name">Aminata Koné</div>
+              <div class="author-meta">Cliente · Abidjan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal visible">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            Le savon charbon est une révélation pour ma peau mixte. Mes pores
+            sont resserrés et ma peau est parfaitement équilibrée. Bravo Alba
+            Soap !
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1509270760431-7e8736868820?q=80&w=100&h=100&fit=crop"
+                alt="Rokhaya"
+              />
+            </div>
+            <div>
+              <div class="author-name">Rokhaya Ndiaye</div>
+              <div class="author-meta">Cliente · Saint-Louis</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal visible">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            J'adore le concept artisanal et le fait que tout soit naturel. Le
+            shampooing solide karité a vraiment fortifié mes cheveux. Je
+            recommande vivement !
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?q=80&w=100&h=100&fit=crop"
+                alt="Binta"
+              />
+            </div>
+            <div>
+              <div class="author-name">Binta Camara</div>
+              <div class="author-meta">Cliente · Thiès</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal visible">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span><span class="star">★</span
+            ><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            Des savons qui sentent divinement bon et qui prennent vraiment soin
+            de la peau. L'emballage est tellement élégant que je les ai gardés
+            comme décoration !
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&h=100&fit=crop"
+                alt="Khady"
+              />
+            </div>
+            <div>
+              <div class="author-name">Khady Sy</div>
+              <div class="author-meta">Cliente · Ziguinchor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section-header reveal visible">
+        <div class="section-eyebrow">Nous Écrire</div>
+        <h2 class="section-title">Parlons <em>beauté</em></h2>
+        <p class="section-sub">
+          Une question, une commande spéciale, ou simplement envie d'échanger ?
+          Nous vous répondons avec plaisir.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal visible">
+          <h3>Nous sommes à votre écoute</h3>
+          <p>
+            Notre équipe est disponible du lundi au samedi pour répondre à
+            toutes vos questions et vous guider vers les produits les plus
+            adaptés à votre peau.
+          </p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon">📧</div>
+              <span>contact@albasoap.com</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">📱</div>
+              <span>+221 77 263 63 17</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <span>Dakar, Sénégal</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">🕐</div>
+              <span>Lun – Sam, 9h à 20h</span>
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2 visible">
+          <form class="contact-form" id="contactForm">
+            <div class="form-field">
+              <label for="nom">Votre nom</label>
+              <input
+                type="text"
+                id="nom"
+                placeholder="Sophie Martin"
+                required=""
+              />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="sophie@exemple.com"
+                required=""
+              />
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="Votre message..."
+                required=""
+              ></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Envoyer le message
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+                ></path>
+              </svg>
+            </button>
+            <p class="form-msg" id="formMsg">
+              ✓ Message envoyé ! Nous vous répondrons très bientôt.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Alba Soap Logo" />
+          </div>
+          <p>
+            La beauté naturelle, sublimée par l'artisanat. Des soins d'exception
+            pour une peau rayonnante, chaque jour.
+          </p>
+          <div class="footer-socials">
+            <a
+              href="file:///C:/Users/papea/Downloads/index_2.html#"
+              class="social-btn"
+              aria-label="Instagram"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="file:///C:/Users/papea/Downloads/index_2.html#"
+              class="social-btn"
+              aria-label="Facebook"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="file:///C:/Users/papea/Downloads/index_2.html#"
+              class="social-btn"
+              aria-label="TikTok"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.44a8.16 8.16 0 004.77 1.52V7.5a4.85 4.85 0 01-1-.81z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="file:///C:/Users/papea/Downloads/index_2.html#"
+              class="social-btn"
+              aria-label="Pinterest"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Boutique</h4>
+          <ul>
+            <li><a href="#boutique">Nouveautés</a></li>
+            <li><a href="#boutique">Best Sellers</a></li>
+            <li><a href="#boutique">Soins Visage</a></li>
+            <li><a href="#boutique">Soins Corps</a></li>
+            <li><a href="#boutique">Coffrets Cadeaux</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Informations</h4>
+          <ul>
+            <li><a href="#apropos">Notre histoire</a></li>
+            <li><a href="#">Livraison</a></li>
+            <li><a href="#">Politique de retour</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter Beauté</h4>
+          <p>
+            Recevez nos conseils beauté et nos offres exclusives en
+            avant-première.
+          </p>
+          <div class="newsletter-form">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Votre email..."
+            />
+            <button onclick="subscribeNewsletter()">OK</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Alba Soap. Tous droits réservés.</span>
+        <div style="display: flex; gap: 20px">
+          <a href="#">Confidentialité</a>
+          <a href="#">CGV</a>
+          <a href="#">Mentions légales</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CART OVERLAY + SIDEBAR -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <div class="cart-title">Mon Panier</div>
+        <button class="cart-close" id="cartClose">✕</button>
+      </div>
+      <div class="cart-items" id="cartItemsContainer">
+        <!-- Dynamiquement rempli par JS -->
+      </div>
+      <div class="cart-footer" id="cartFooter" style="display: none">
+        <div class="cart-subtotal">
+          <span>Total</span>
+          <span class="cart-subtotal-val" id="cartTotal">13 500 FCFA</span>
+        </div>
+        <p class="cart-note">
+          Livraison calculée à la commande · Satisfaite ou remboursée
+        </p>
+        <button class="cart-whatsapp" onclick="orderWhatsApp()">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+            ></path>
+          </svg>
+          Commander via WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast">
+      <span class="toast-icon">✓</span>
+      <span id="toastMsg">Savon Lavande Pure ajouté au panier</span>
+    </div>
+
+    <!-- WHATSAPP FLOAT BTN -->
+    <a
+      href="https://wa.me/221772636317"
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="WhatsApp"
+    >
+      <div class="whatsapp-pulse"></div>
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        ></path>
+      </svg>
+    </a>
+
+    <script>
+      /* ================================
+       CONFIG
+    ================================ */
+      const WHATSAPP_NUMBER = "221772636317"; // ← Modifier ce numéro
+
+      /* ================================
+       PRODUCT DATA
+    ================================ */
+      const products = [
+        {
+          id: 1,
+          name: "Savon Rose de Damas",
+          price: 4500,
+          category: "visage",
+          badge: "best",
+          badgeLabel: "Best Seller",
+          shortDesc:
+            "Infusion de pétales de roses pour un teint éclatant et une hydratation intense.",
+          img: "https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600",
+          emoji: "🌹",
+        },
+        {
+          id: 2,
+          name: "Savon Argan & Miel",
+          price: 5200,
+          category: "corps",
+          badge: "new",
+          badgeLabel: "Nouveau",
+          shortDesc:
+            "Un soin riche aux huiles précieuses pour nourrir les peaux les plus sèches.",
+          img: "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=800&auto=format&fit=crop",
+          emoji: "🍯",
+        },
+        {
+          id: 3,
+          name: "Savon Lavande Pure",
+          price: 3800,
+          category: "corps",
+          badge: null,
+          badgeLabel: null,
+          shortDesc:
+            "Détendez vos sens avec notre lavande bio, idéale pour un rituel du soir apaisant.",
+          img: "https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600",
+          emoji: "💜",
+        },
+        {
+          id: 4,
+          name: "Shampooing Solide Karité",
+          price: 6500,
+          category: "cheveux",
+          badge: "new",
+          badgeLabel: "Nouveau",
+          shortDesc:
+            "Nettoie en douceur tout en fortifiant la fibre capillaire grâce au beurre de karité brut.",
+          img: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=600",
+          emoji: "🌿",
+        },
+        {
+          id: 5,
+          name: "Savon Charbon & Tea Tree",
+          price: 4200,
+          category: "visage",
+          badge: "best",
+          badgeLabel: "Best Seller",
+          shortDesc:
+            "Élimine les impuretés et régule l'excès de sébum pour une peau parfaitement saine.",
+          img: "https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600",
+          emoji: "✨",
+        },
+        {
+          id: 6,
+          name: "Savon Jasmin & Vanille",
+          price: 4800,
+          category: "corps",
+          badge: null,
+          badgeLabel: null,
+          shortDesc:
+            "Une fragrance envoûtante et une mousse onctueuse pour un moment de pur plaisir.",
+          img: "https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600",
+          emoji: "🌸",
+        },
+        {
+          id: 7,
+          name: "Savon Aloe & Concombre",
+          price: 3500,
+          category: "visage",
+          badge: "new",
+          badgeLabel: "Nouveau",
+          shortDesc:
+            "Un vent de fraîcheur pour réveiller votre peau et l'hydrater intensément dès le matin.",
+          img: "https://images.unsplash.com/photo-1605264964528-06403738d6dc?q=80&w=600",
+          emoji: "🥒",
+        },
+        {
+          id: 8,
+          name: "Coffret Luxe Alba",
+          price: 18000,
+          category: "corps",
+          badge: "best",
+          badgeLabel: "Best Seller",
+          shortDesc:
+            "L'expérience complète Alba Soap réunie dans un écrin raffiné. Le cadeau idéal.",
+          img: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=80&w=800&auto=format&fit=crop",
+          emoji: "🎁",
+        },
+      ];
+
+      const testimonials = [
+        {
+          name: "Fatou Diallo",
+          location: "Dakar",
+          rating: 5,
+          text: "Le savon Rose de Damas a littéralement transformé ma peau. En deux semaines, mon teint est lumineux et unifié. Je ne peux plus m'en passer !",
+          img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=100&h=100&fit=crop",
+        },
+        {
+          name: "Mariama Baldé",
+          location: "Conakry",
+          rating: 5,
+          text: "Enfin des produits naturels qui tiennent leurs promesses ! Le coffret cadeau que j'ai offert à ma mère a été un énorme succès. Qualité irréprochable.",
+          img: "https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?q=80&w=100&h=100&fit=crop",
+        },
+        {
+          name: "Aminata Koné",
+          location: "Abidjan",
+          rating: 5,
+          text: "Je suis convertie aux savons artisanaux depuis que j'ai découvert Alba Soap. Le packaging est magnifique et les parfums sont divins. Service client au top !",
+          img: "https://images.unsplash.com/photo-1567532939604-b6c5b0adccbf?q=80&w=100&h=100&fit=crop",
+        },
+        {
+          name: "Rokhaya Ndiaye",
+          location: "Saint-Louis",
+          rating: 5,
+          text: "Le savon charbon est une révélation pour ma peau mixte. Mes pores sont resserrés et ma peau est parfaitement équilibrée. Bravo Alba Soap !",
+          img: "https://images.unsplash.com/photo-1509270760431-7e8736868820?q=80&w=100&h=100&fit=crop",
+        },
+        {
+          name: "Binta Camara",
+          location: "Thiès",
+          rating: 5,
+          text: "J'adore le concept artisanal et le fait que tout soit naturel. Le shampooing solide karité a vraiment fortifié mes cheveux. Je recommande vivement !",
+          img: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?q=80&w=100&h=100&fit=crop",
+        },
+        {
+          name: "Khady Sy",
+          location: "Ziguinchor",
+          rating: 5,
+          text: "Des savons qui sentent divinement bon et qui prennent vraiment soin de la peau. L'emballage est tellement élégant que je les ai gardés comme décoration !",
+          img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&h=100&fit=crop",
+        },
+      ];
+
+      /* ================================
+       STATE
+    ================================ */
+      let cart = [];
+
+      /* ================================
+       PRODUCT SVG GENERATOR
+    ================================ */
+      /* ================================
+       RENDER PRODUCTS
+    ================================ */
+      function renderProducts(filter = "all") {
+        const grid = document.getElementById("productsGrid");
+        const filtered =
+          filter === "all"
+            ? products
+            : products.filter((p) => p.category === filter);
+        grid.innerHTML = filtered
+          .map(
+            (p) => `
+        <div class="product-card reveal" data-id="${p.id}">
+          <div class="product-img">
+            <img src="${p.img}" alt="${p.name}">
+            ${p.badge ? `<span class="product-badge badge-${p.badge}">${p.badgeLabel}</span>` : ""}
+            <button class="quick-view-btn" onclick="openQuickView(event, ${p.id})">Revue Rapide</button>
+            <button class="product-wishlist" onclick="toggleWish(event, this)" aria-label="Favoris">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">${p.category}</div>
+            <div class="product-name">${p.name}</div>
+            <div class="product-desc">${p.shortDesc}</div>
+            <div class="product-foot">
+              <div class="product-price">${p.price.toLocaleString("fr-FR")} <span>FCFA</span></div>
+              <button class="add-btn" onclick="addToCart(${p.id}, this)">
+                <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+                </svg>
+                Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+      `,
+          )
+          .join("");
+        observeReveal();
+        initCursorEvents();
+      }
+
+      /* ================================
+       QUICK VIEW LOGIC
+    ================================ */
+      function openQuickView(e, id) {
+        e.stopPropagation();
+        const p = products.find((x) => x.id === id);
+        if (!p) return;
+
+        const modal = document.getElementById("quickViewModal");
+        const content = document.getElementById("modalContent");
+
+        content.innerHTML = `
+          <button class="modal-close" onclick="closeQuickView()">✕</button>
+          <div class="modal-img">
+            <img src="${p.img}" alt="${p.name}">
+          </div>
+          <div class="modal-details">
+            <div class="modal-category">${p.category}</div>
+            <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 15px;">${p.name}</h2>
+            <div class="product-price" style="font-size: 1.5rem; margin-bottom: 25px;">${p.price.toLocaleString("fr-FR")} FCFA</div>
+            <p class="about-text" style="margin-bottom: 35px;">${p.shortDesc}. Elaboré artisanalement avec des extraits naturels pour un soin d'exception qui respecte l'équilibre de votre peau.</p>
+            <button class="form-submit" style="width: 100%; justify-content: center; padding: 18px;" onclick="addToCart(${p.id}, this); closeQuickView();">
+              Ajouter au panier — ${p.price.toLocaleString("fr-FR")} FCFA
+            </button>
+          </div>
+        `;
+
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+        initCursorEvents();
+      }
+
+      function closeQuickView() {
+        const modal = document.getElementById("quickViewModal");
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      // Fermeture par overlay ou touche Echap
+      document
+        .getElementById("quickViewModal")
+        .addEventListener("click", (e) => {
+          if (e.target.id === "quickViewModal") closeQuickView();
+        });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeQuickView();
+      });
+
+      /* ================================
+       RENDER TESTIMONIALS
+    ================================ */
+      function renderTestimonials() {
+        const grid = document.getElementById("testimonialsGrid");
+        grid.innerHTML = testimonials
+          .map(
+            (t) => `
+        <div class="testimonial-card reveal">
+          <div class="stars">${'<span class="star">★</span>'.repeat(t.rating)}</div>
+          <p class="testimonial-text">${t.text}</p>
+          <div class="testimonial-author">
+            <div class="author-avatar"><img src="${t.img}" alt="${t.name}"></div>
+            <div>
+              <div class="author-name">${t.name}</div>
+              <div class="author-meta">Cliente · ${t.location}</div>
+            </div>
+          </div>
+        </div>
+      `,
+          )
+          .join("");
+        observeReveal();
+      }
+
+      /* ================================
+       CART FUNCTIONS
+    ================================ */
+      function addToCart(id, btn) {
+        const product = products.find((p) => p.id === id);
+        const existing = cart.find((item) => item.id === id);
+        if (existing) {
+          existing.qty++;
+        } else {
+          cart.push({ ...product, qty: 1 });
+        }
+        updateCartUI();
+        showToast(`${product.name} ajouté au panier`);
+        btn.classList.add("added");
+        btn.innerHTML = `<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Ajouté`;
+        setTimeout(() => {
+          btn.classList.remove("added");
+          btn.innerHTML = `<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg> Ajouter`;
+        }, 2000);
+      }
+
+      function removeFromCart(id) {
+        cart = cart.filter((item) => item.id !== id);
+        updateCartUI();
+      }
+
+      function changeQty(id, delta) {
+        const item = cart.find((i) => i.id === id);
+        if (!item) return;
+        item.qty += delta;
+        if (item.qty <= 0) {
+          removeFromCart(id);
+          return;
+        }
+        updateCartUI();
+      }
+
+      function updateCartUI() {
+        const total = cart.reduce(
+          (sum, item) => sum + item.price * item.qty,
+          0,
+        );
+        const count = cart.reduce((sum, item) => sum + item.qty, 0);
+        const countEl = document.getElementById("cartCount");
+        const container = document.getElementById("cartItemsContainer");
+        const footer = document.getElementById("cartFooter");
+        const totalEl = document.getElementById("cartTotal");
+
+        countEl.textContent = count;
+        countEl.classList.toggle("visible", count > 0);
+        totalEl.textContent = total.toLocaleString("fr-FR") + " FCFA";
+
+        if (cart.length === 0) {
+          container.innerHTML = `
+          <div class="cart-empty">
+            <svg width="60" height="60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"/>
+            </svg>
+            <p>Votre panier est vide</p>
+          </div>`;
+          footer.style.display = "none";
+        } else {
+          container.innerHTML = cart
+            .map(
+              (item) => `
+          <div class="cart-item" id="cartItem${item.id}">
+            <div class="cart-item-img"><img src="${item.img}" alt="${item.name}"></div>
+            <div class="cart-item-info">
+              <div class="cart-item-name">${item.name}</div>
+              <div class="cart-item-price">${item.price.toLocaleString("fr-FR")} FCFA</div>
+              <div class="cart-qty">
+                <button class="qty-btn" onclick="changeQty(${item.id}, -1)">−</button>
+                <span class="qty-num">${item.qty}</span>
+                <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
+              </div>
+              <span class="cart-item-remove" onclick="removeFromCart(${item.id})">Supprimer</span>
+            </div>
+            <div class="cart-item-total">${(item.price * item.qty).toLocaleString("fr-FR")} FCFA</div>
+          </div>
+        `,
+            )
+            .join("");
+          footer.style.display = "block";
+        }
+      }
+
+      function openCart() {
+        document.getElementById("cartOverlay").classList.add("open");
+        document.getElementById("cartSidebar").classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeCart() {
+        document.getElementById("cartOverlay").classList.remove("open");
+        document.getElementById("cartSidebar").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      /* ================================
+       WHATSAPP ORDER
+    ================================ */
+      function orderWhatsApp() {
+        if (cart.length === 0) return;
+        const total = cart.reduce(
+          (sum, item) => sum + item.price * item.qty,
+          0,
+        );
+        let message = "🌸 *Commande Alba Soap* 🌸\n\n";
+        message += "*Produits commandés :*\n";
+        cart.forEach((item) => {
+          message += `• ${item.name} x${item.qty} — ${(item.price * item.qty).toLocaleString("fr-FR")} FCFA\n`;
+        });
+        message += `\n*💰 Total : ${total.toLocaleString("fr-FR")} FCFA*\n\n`;
+        message += "_Merci de confirmer ma commande_ ✨";
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+      }
+
+      /* ================================
+       TOAST
+    ================================ */
+      let toastTimer;
+      function showToast(msg) {
+        const toast = document.getElementById("toast");
+        document.getElementById("toastMsg").textContent = msg;
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove("show"), 3000);
+      }
+
+      /* ================================
+       FILTERS
+    ================================ */
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderProducts(btn.dataset.filter);
+        });
+      });
+
+      /* ================================
+       WISHLIST
+    ================================ */
+      function toggleWish(e, btn) {
+        e.stopPropagation();
+        btn.classList.toggle("liked");
+        const icon = btn.querySelector("svg");
+        if (btn.classList.contains("liked")) {
+          icon.setAttribute("fill", "currentColor");
+          showToast("Ajouté aux favoris 💕");
+        } else {
+          icon.setAttribute("fill", "none");
+        }
+      }
+
+      /* ================================
+       NAVBAR SCROLL
+    ================================ */
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        nav.classList.toggle("scrolled", window.scrollY > 60);
+      });
+
+      /* ================================
+       MOBILE MENU
+    ================================ */
+      document.getElementById("navHamburger").addEventListener("click", () => {
+        document.getElementById("mobileMenu").classList.add("open");
+        document.body.style.overflow = "hidden";
+      });
+      document.getElementById("mobileClose").addEventListener("click", () => {
+        document.getElementById("mobileMenu").classList.remove("open");
+        document.body.style.overflow = "";
+      });
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("mobileMenu").classList.remove("open");
+          document.body.style.overflow = "";
+        });
+      });
+
+      /* ================================
+       CART EVENTS
+    ================================ */
+      document.getElementById("cartToggle").addEventListener("click", openCart);
+      document.getElementById("cartClose").addEventListener("click", closeCart);
+      document
+        .getElementById("cartOverlay")
+        .addEventListener("click", closeCart);
+
+      /* ================================
+       CONTACT FORM
+    ================================ */
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nom = document.getElementById("nom").value;
+          const email = document.getElementById("email").value;
+          const messageText = document.getElementById("message").value;
+
+          // Construction du message WhatsApp
+          let waMessage = `✨ *Nouveau message Contact - Alba Soap* ✨\n\n`;
+          waMessage += `👤 *Nom :* ${nom}\n`;
+          waMessage += `📧 *Email :* ${email}\n\n`;
+          waMessage += `📝 *Message :*\n${messageText}`;
+
+          const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waMessage)}`;
+
+          // Ouvrir WhatsApp dans un nouvel onglet
+          window.open(url, "_blank");
+
+          const msg = document.getElementById("formMsg");
+          msg.style.display = "block";
+          this.reset();
+          setTimeout(() => {
+            msg.style.display = "none";
+          }, 5000);
+        });
+
+      /* ================================
+       NEWSLETTER
+    ================================ */
+      function subscribeNewsletter() {
+        const input = document.getElementById("newsletterEmail");
+        if (input.value && input.value.includes("@")) {
+          showToast("Merci ! Vous êtes inscrite à la newsletter 🌸");
+          input.value = "";
+        } else {
+          showToast("Veuillez entrer un email valide.");
+        }
+      }
+
+      /* ================================
+       SCROLL REVEAL
+    ================================ */
+      function observeReveal() {
+        const els = document.querySelectorAll(".reveal:not(.visible)");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("visible");
+                observer.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+        els.forEach((el) => observer.observe(el));
+      }
+
+      /* ================================
+       CUSTOM CURSOR
+    ================================ */
+      const cursor = document.getElementById("cursor");
+      const cursorRing = document.getElementById("cursorRing");
+
+      document.addEventListener("mousemove", (e) => {
+        if (!cursor) return;
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+        cursorRing.style.left = e.clientX + "px";
+        cursorRing.style.top = e.clientY + "px";
+      });
+
+      function initCursorEvents() {
+        document.querySelectorAll("a, button, .product-card").forEach((el) => {
+          if (el.dataset.cursorBound) return;
+          el.dataset.cursorBound = "true";
+
+          el.addEventListener("mouseenter", () => {
+            cursor.style.width = "16px";
+            cursor.style.height = "16px";
+            cursorRing.style.width = "46px";
+            cursorRing.style.height = "46px";
+            cursorRing.style.borderColor = "var(--rose-deep)";
+          });
+          el.addEventListener("mouseleave", () => {
+            cursor.style.width = "10px";
+            cursor.style.height = "10px";
+            cursorRing.style.width = "32px";
+            cursorRing.style.height = "32px";
+            cursorRing.style.borderColor = "var(--rose)";
+          });
+        });
+      }
+
+      /* ================================
+       ACTIVE LINK ON SCROLL
+    ================================ */
+      function handleActiveLinks() {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-links a");
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((a) => {
+          a.classList.remove("active");
+          if (a.getAttribute("href") === `#${current}`) {
+            a.classList.add("active");
+          }
+        });
+      }
+      window.addEventListener("scroll", handleActiveLinks);
+
+      /* ================================
+       INIT
+    ================================ */
+      renderProducts();
+      renderTestimonials();
+      updateCartUI();
+      observeReveal();
+      initCursorEvents();
+    </script>
+  </body>
+</html>
